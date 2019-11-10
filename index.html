@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- <link rel="stylesheet" type="text/css" href="css\to do list.css"> -->
-  </head>
-  <body>
-   <h1>Todo List</h1>
-    <script src="todolist.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  
+  <!-- <form>
+    <div class ="form-group row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Todo Name</label>
+        <div class="col-sm-10">
+<input class="form-control" type="text" id="txt">
+        </div>
+        <button onclick="addLI()">Add</button>
+        <button onclick="editLI()">Edit</button>
+        <button onclick="deleteLI()">Delete</button>  
+    </div>
+  </form> -->
+
+  <form style="margin-left: 20px; margin-right: 20px;">
+      <div class="form-group">
+        <h4>Todo List<span class="badge badge-secondary"></span></h4>
+        <input type="text" class="form-control" id="txt" placeholder="Enter todo name">
+      </div>
+      <button onclick="addLI()" type="button" class="btn btn-primary">Add</button>
+      <button onclick="editLI()" type="button" class="btn btn-success">Edit</button>
+      <button onclick="deleteLI()" type="button" class="btn btn-danger">Delete</button>
+  </form>
+    
+    <ul class="list-group" style="margin-top: 30px;" id="list">
+        <li class="list-group-item">Makan</li> 
+        <li class="list-group-item">Minum</li>
+        <li class="list-group-item">Minum</li>
+        <li class="list-group-item">Beol</li>
+    </ul>
+
+ 
+<script src="todolist.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
 </html>
