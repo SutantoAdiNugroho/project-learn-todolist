@@ -30,11 +30,14 @@ function refreshArray() {
 function addLI(){
     var listNode = document.getElementById("list"), textNode = document.createTextNode(inputText.value), liNode = document.createElement("li");
     liNode.className = "list-group-item"
-    
-    liNode.appendChild(textNode);
-    listNode.appendChild(liNode);
-    
-    refreshArray();
+
+    if (inputText.value == "") {
+        alert("He, tak kandani nek ngisi todo ojo kosongan!!!")
+    } else {
+        liNode.appendChild(textNode);
+        listNode.appendChild(liNode);
+        refreshArray();
+    }
     
     liNode.onclick = function(){
         index = tab.indexOf(liNode.innerHTML);
@@ -43,8 +46,12 @@ function addLI(){
 }
 
 function editLI(){
-    items[index].innerHTML = inputText.value;
-    refreshArray();
+    if (inputText.value == "") {
+        alert("He, tak kandani nek arep edit todo ojo kosongan!!!")
+    } else {
+        items[index].innerHTML = inputText.value;
+        refreshArray();
+    }
 }
 
 function deleteLI(){
@@ -59,19 +66,16 @@ function deleteLI(){
 
 //CONSOLE TodoList
 
-// var myTodos = ["Makan", "Minum"];                               
+// var myTodos = ["Makan", "Minum", "Tidur"];                               
 
 // var txtTodo = ('My Todo : \n'+ myTodos.join('\n'));
 
-// if (confirm(`${txtTodo}\n\nTambahkan data?`)) {
-//     for (var i = 0; i < 1; i++) {             
-//         myTodos.push(prompt('Tambahkan Todo ' + (i))); 
-//     }
+// if (confirm(`${txtTodo}\n\nTambahkan data?`)) { 
+//     myTodos.push(prompt('Tambahkan Todo ')); 
 // } else {
+
 //     if (confirm(`Hapus data?`)) {
-//         for (var i = 0; i < 1; i++) {             
-//             myTodos.splice(prompt('Hapus Todo ' + (i))); 
-//         }
+//         myTodos.splice(prompt('Hapus Todo ')); 
 //     } else {
 
 //     }
