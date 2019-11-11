@@ -65,20 +65,22 @@ function deleteLI(){
 
 
 //CONSOLE TodoList
+function runConsole() {
 
-// var myTodos = ["Makan", "Minum", "Tidur"];                               
+    var myTodos = ["Makan", "Minum", "Tidur"];                               
+var txtTodo = ('My Todo : \n'+ myTodos.join('\n'));
 
-// var txtTodo = ('My Todo : \n'+ myTodos.join('\n'));
+if (confirm(`${txtTodo}\n\nTambahkan data?`)) { 
+    myTodos.push(prompt('Tambahkan Todo ')); 
+} else {
 
-// if (confirm(`${txtTodo}\n\nTambahkan data?`)) { 
-//     myTodos.push(prompt('Tambahkan Todo ')); 
-// } else {
+    if (confirm(`Hapus data?`)) {
+        myTodos.splice(prompt('Hapus Todo ')); 
+    } else {
 
-//     if (confirm(`Hapus data?`)) {
-//         myTodos.splice(prompt('Hapus Todo ')); 
-//     } else {
+    }
+}
 
-//     }
-// }
+alert('My Todo : \n' + myTodos.join('\n')); 
+}
 
-// alert('My Todo : \n' + myTodos.join('\n')); 
